@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:loja_virtual/screens/base/base_screen.dart';
 
@@ -13,7 +12,11 @@ class MyApp extends StatelessWidget {
       title: 'Loja da Gra',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.teal,
+        scaffoldBackgroundColor: Colors.teal,
+        appBarTheme: const AppBarTheme(
+          elevation: 0
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: BaseScreen(),

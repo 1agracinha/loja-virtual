@@ -5,8 +5,11 @@ class PageManager {
 
   PageController _pageController;
 
+  int page = 0;
 
-  void setPage(value){
+  void setPage(value) {
+    if (value == page) return;
+    page = value;
     _pageController.jumpToPage(value);
   }
 }
