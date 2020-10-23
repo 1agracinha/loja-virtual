@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:loja_virtual/models/user_manager.dart';
 import 'package:loja_virtual/screens/base/base_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   runApp(MyApp());
@@ -8,7 +10,9 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Provider(
+      create: (_) => UserManager(),
+      child: MaterialApp(
       title: 'Loja da Gra',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -20,6 +24,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: BaseScreen(),
+    )
     );
   }
 }
