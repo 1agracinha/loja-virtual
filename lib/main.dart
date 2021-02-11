@@ -10,14 +10,14 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Provider(
+    return ChangeNotifierProvider(
       create: (_) => UserManager(),
       child: MaterialApp(
       title: 'Loja da Gra',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.teal,
-        scaffoldBackgroundColor: Colors.teal,
+        primaryColor: Color(0xff9cbeff),
+        scaffoldBackgroundColor: Color(0xff9cbeff),
         appBarTheme: const AppBarTheme(
           elevation: 0
         ),
